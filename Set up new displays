@@ -1,0 +1,48 @@
+1. Conecteaza Display-ul la internet printr-un cablu ETHERNET
+
+2. Conecteaza-te prin ssh la display:
+
+ssh pi@ip-addr
+
+ - user: pi
+ - parola: metrici@admin
+
+3. Ruleaza demo-ul 10 minute folosind comanda:
+
+sudo /var/www/html/code/rpi-rgb-led-matrix/examples-api-use/demo -D4 --led-rows=32 --led-cols=64 --led-multiplexing=1 --led-chain=2 --led-parallel=2 --led-no-hardware-pulse --led-show-refresh --led-slowdown-gpio=4
+
+4. Dupa 10 minute sau un alt interval de timp ales in care ati verificat ca display-ul nu are probleme cu imaginea, apasati CTRL + C pentru a inchide demo-ul.
+
+5. Activati software-ul display-ului tastand:
+
+crontab -e 
+
+6. In interiorul fisierului deschis stergeti semnul # al liniei:
+
+ #*/1 * * * * /bin/bash /var/www/html/scripts/service_monitor.sh
+
+7. Iesiti din fisier si salvati modificarea apasand CTRL + X apoi Y apoi ENTER
+
+8. Activati sofware-ul de display:
+
+sudo systemctl enable DisplayM
+sudo systemctl restart DisplayM
+
+9. Verificati situatia programului tastand:
+
+systemctl status DisplayM.service
+
+9.1 Aici ar trebui sa gasiti liniile:
+
+Loaded: loaded (/etc/systemd/system/DisplayM.service; enabled; vendor preset: enabled)
+Active: active (running)
+
+9.2 Inchidedi comanda de la punctul 9 folosind CTRL + C
+
+10. Verificati daca serviciul a fost activat prin a restarta dispozitivul si a observa daca display-ul afiseaza ceva dupa restart
+
+sudo reboot
+
+11. Pentru teste aditionale intrati in interfata web a display-ului si schimbati setarile de internet; de asemenea puteti restarta dispozitivul pentru a verifica daca totul functioneaza corect la boot.
+
+sudo reboot

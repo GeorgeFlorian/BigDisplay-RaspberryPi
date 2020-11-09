@@ -1,0 +1,25 @@
+git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
+
+make -C examples-api-use
+
+sudo examples-api-use/demo -D0
+
+ssh 
+
+mc
+
+sudo examples-api-use/demo -D1 examples-api-use/runtext.ppm --led-rows=32 --led-cols=64 --led-multiplexing=1 --led-chain=2 --led-parallel=2 --led-no-hardware-pulse --led-show-refresh --led-slowdown-gpio=4
+
+sudo examples-api-use/demo -D4 --led-rows=32 --led-cols=64 --led-multiplexing=1 --led-chain=2 --led-parallel=2 --led-no-hardware-pulse --led-show-refresh --led-slowdown-gpio=4
+
+______________________________________________________________________________
+
+sudo apt-get install g++
+mkdir 4panel
+cd 4panel
+sudo nano main.cpp
+git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
+sudo g++ -Wall -Irpi-rgb-led-matrix/include  main.cpp -o main
+
+sudo
+./main

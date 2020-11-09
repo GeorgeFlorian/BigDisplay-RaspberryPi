@@ -1,0 +1,28 @@
+1. Open a terminal on your PC
+2. Type in: ssh pi@ip_addr
+3. Type the password: metrici@admin
+4. Type in: crontab -e
+Add "#" character at the begining of the last line like this:
+#*/1 * * * * /bin/bash /var/www/html/scripts/service_monitor.sh
+Save and close the file
+
+5. Type in:
+
+sudo systemctl stop DisplayM
+cd /var/www/html/code/rpi-rgb-led-matrix
+make -C examples-api-use
+
+6. Choose from two demos:
+6.1 Text Demo:
+
+sudo examples-api-use/demo -D1 examples-api-use/runtext.ppm --led-rows=32 --led-cols=64 --led-multiplexing=1 --led-chain=2 --led-parallel=2 --led-no-hardware-pulse --led-show-refresh --led-slowdown-gpio=4
+
+6.2 Color Pulse Demo:
+
+sudo examples-api-use/demo -D4 --led-rows=32 --led-cols=64 --led-multiplexing=1 --led-chain=2 --led-parallel=2 --led-no-hardware-pulse --led-show-refresh --led-slowdown-gpio=4
+
+7. Type in: crontab -e
+Remove the "#" character from the beginning of the last line
+Save and close the file
+
+8. Type in: sudo systemctl restart DisplayM

@@ -1,0 +1,5 @@
+Apache2 Server Settings:
+
+ - Changing DocumentRoot from /etc/apache2/sites-enabled to match the location of your website
+
+ - Changing index.php and index.html priority from /etc/apache2/mods-enabled/dir.conf to match your default index format

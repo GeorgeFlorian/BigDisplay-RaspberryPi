@@ -1,0 +1,9 @@
+!!! Cablu Ethernet !!!
+
+DHCP cu numele MetriciDisplayEth sau unknow
+
+user: pi
+parola: metrici@admin
+
+Schimba informatia afisata de aici
+https://dev2.metrici.ro/ppd/edit_location/1

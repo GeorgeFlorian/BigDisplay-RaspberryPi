@@ -1,0 +1,26 @@
+1. Insert SD Card with system into a USB Port
+2. Open Terminal
+3. Obtain device name by running: sudo fdisk -l
+4. Type in: sudo dd if=device_name of=example/path/RPI_Display.img
+
+sudo dd if=/dev/sdb of=~/Desktop/RPI-Display-Image/RPI_Display.img
+
+5. Do not remove SD card until the process is done
+6. Insert the empty SD Card into a USB Port
+7. Check if SD has mounted parition with: sudo mount | grep device_name
+
+sudo mount | grep sdb
+
+8. If output is blank skip this step. If not, unmount the liste ones with:
+
+sudo umount /dev/sdb1 /dev/sdb2 /dev/sdb3 /dev/sdb4
+
+9. Re-do step 7
+
+10. Write image to SD Card using: sudo dd if=example/path/RPI_Display.img of=device_name
+
+sudo dd if=~/Desktop/RPI-Display-Image/RPI_Display.img of=/dev/sdb
+
+11. Do not remove SD card until the process is done
+
+12. Done ! Congrats !

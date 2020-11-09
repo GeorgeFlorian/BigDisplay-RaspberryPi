@@ -1,0 +1,18 @@
+"Metrici_MP_Display.zip" contains the website (php and css files).
+"Metrici_MP_Display" is the executable/program that runs on the RPI.
+To do an update, provide "Metrici_MP_Display.zip" and "Metrici_MP_Display" in this order.
+
+If you make changes to the website, just compress the changed files into "Metrici_MP_Display.zip", get the MD5 Hash code and send them to client.
+If you choose to compress all of the files, make sure to make a small change to "dhcp_ip.php" file, like deleting and rewriting a letter. This is done to obtain a new and different MD5 code, because the MD5 hash is generated from the first bytes of the .zip file and in this case those come from "dhcp_ip.php".
+
+If you make changes to the program (Metrici_MP_Display.cc), you have to:
+ - change, Metrici_MP_Display.cc, line 210 : "system("echo 'Metrici_128x64_Display v1.3'");" to the new respective version;
+ - change, in "/website/config/update.php", line 34 : "if ($response == "Metrici_128x64_Display v1.3")"  to match the above modification, compress it in "Metrici_MP_Display.zip", get its MD5 Hash code and send them to the client.  If the above strings don't match, the program won't be updated.
+
+To upload "Metrici_MP_Display.zip" the user has to provide a MD5 Hash code.
+
+To obtain MD5 Hash code for "Metrici_MP_Display.zip" :
+
+1. Place "get_code.sh" script and "Metrici_MP_Display.zip" in the same folder;
+2. Run "get_code.sh" script;
+3. Copy code from the newly made "hash_code.txt" file.

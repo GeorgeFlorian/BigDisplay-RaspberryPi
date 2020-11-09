@@ -1,0 +1,9 @@
+interface wlan0
+noipv4
+noipv6
+interface eth0
+hostname MetriciDisplayEth
+clientid
+static ip_address=192.168.1.80/24
+static routers=192.168.1.1
+static domain_name_servers=8.8.8.8
