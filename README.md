@@ -9,3 +9,10 @@ It is also used with Metrici LPR Parking Module to show free parking spaces for 
 The larger LED Display has around 65x33 cm and is 8 cm deep.
 
 It can show 1, 2 or 3 rows of text with up to 12 characters each. All parameters can be changed from its own web interface. It also has WiFi and 10/100 Ethernet communication
+
+### Home Page
+![Home](https://github.com/GeorgeFlorian/BigDisplay-RaspberryPi/blob/main/raw%20data/1%20-%20Home%20Page.png?raw=true)
+### Network Settings
+![Network](https://github.com/GeorgeFlorian/BigDisplay-RaspberryPi/blob/main/raw%20data/2%20-%20Network%20Settings.png?raw=true)
+### Update Page
+![Update](https://github.com/GeorgeFlorian/BigDisplay-RaspberryPi/blob/main/raw%20data/3%20-%20Update%20Page.png?raw=true)
