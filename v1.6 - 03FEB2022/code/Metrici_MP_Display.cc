@@ -12,7 +12,31 @@
 #include <sys/file.h>
 #include <ext/stdio_filebuf.h>
 #include <algorithm>
-// #include <curl/curl.h>
+
+// std::string time_in_HH_MM_SS_MMM()
+// {
+//     using namespace std::chrono;
+
+//     // get current time
+//     auto now = system_clock::now();
+
+//     // get number of milliseconds for the current second
+//     // (remainder after division into seconds)
+//     auto ms = duration_cast<milliseconds>(now.time_since_epoch()) % 1000;
+
+//     // convert to std::time_t in order to convert to std::tm (broken time)
+//     auto timer = system_clock::to_time_t(now);
+
+//     // convert to broken time
+//     std::tm bt = *std::localtime(&timer);
+
+//     std::ostringstream oss;
+
+//     oss << std::put_time(&bt, "%H:%M:%S"); // HH:MM:SS
+//     oss << '.' << std::setfill('0') << std::setw(3) << ms.count();
+
+//     return oss.str();
+// }
 
 using namespace rgb_matrix;
 
@@ -219,6 +243,7 @@ void error_on_three_lines(RGBMatrix *canvas, std::string &line1, std::string &li
 }
 
 // new code: v1.5.1
+// bool arrows = false;
 // void display_arrows(RGBMatrix *canvas, std::string& line1, std::string& line2,
 //                               int brightness = 50, rgb_matrix::Color color1 = WHITE, rgb_matrix::Color color2 = WHITE) {
 //   canvas->Clear();
@@ -256,31 +281,6 @@ void error_on_three_lines(RGBMatrix *canvas, std::string &line1, std::string &li
 //   return true;
 // }
 // end code: v1.5.1
-
-// std::string time_in_HH_MM_SS_MMM()
-// {
-//     using namespace std::chrono;
-
-//     // get current time
-//     auto now = system_clock::now();
-
-//     // get number of milliseconds for the current second
-//     // (remainder after division into seconds)
-//     auto ms = duration_cast<milliseconds>(now.time_since_epoch()) % 1000;
-
-//     // convert to std::time_t in order to convert to std::tm (broken time)
-//     auto timer = system_clock::to_time_t(now);
-
-//     // convert to broken time
-//     std::tm bt = *std::localtime(&timer);
-
-//     std::ostringstream oss;
-
-//     oss << std::put_time(&bt, "%H:%M:%S"); // HH:MM:SS
-//     oss << '.' << std::setfill('0') << std::setw(3) << ms.count();
-
-//     return oss.str();
-// }
 
 int readFromFile(std::fstream &settings_file, std::string (&str)[20], std::string identity)
 {
@@ -462,6 +462,7 @@ int main(int argc, char *argv[])
     defaults.chain_length = 2;
     defaults.parallel = 2;
     // defaults.pixel_mapper_config = "U-mapper";
+    // defaults.led_rgb_sequence = "GRB";
     defaults.disable_hardware_pulsing = true;
     defaults.show_refresh_rate = false;
     runtime_defaults.gpio_slowdown = 4;
@@ -496,7 +497,6 @@ int main(int argc, char *argv[])
     std::string current_display_settings[3] = {"URL not entered", "2", "50"};
     std::string current_dhcpcd_conf_content[20];
     std::string current_wpa_conf_content[20];
-    // bool arrows = false;
     int refresh_interval = 2;
     int brightness = 50;
     std::string nr_of_lines_string = "";
