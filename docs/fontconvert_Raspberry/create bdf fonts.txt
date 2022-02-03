@@ -1,0 +1,1 @@
+otf2bdf -o ArialB_20.bdf -p 20 arialbd.ttf

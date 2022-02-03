@@ -66,28 +66,28 @@ function handleConfigForm() {
 
 function getHTMLColor($color) {
     if($color == "R") {
-        return "style=\"color:red;\"";
+        return "color:red;";
     }
     else if($color == "O") {        
-        return "style=\"color:orange;\"";
+        return "color:orange;";
     }
     else if($color == "Y") {        
-        return "style=\"color:yellow;\"";
+        return "color:yellow;";
     }
     else if($color == "G") {        
-        return "style=\"color:green;\"";
+        return "color:green;";
     }
     else if($color == "B") {        
-        return "style=\"color:blue;\"";
+        return "color:dodgerblue;";
     }
     else if($color == "I") {        
-        return "style=\"color:indigo;\"";
+        return "color:mediumpurple;";
     }
     else if($color == "V") {        
-        return "style=\"color:violet;\"";
+        return "color:violet;";
     }
     else if($color == "W") {        
-        return "style=\"color:white;\"";
+        return "color:white;";
     }
     return "Invalid";
 
@@ -113,7 +113,7 @@ function displayLinesOnPage() {
     
     foreach ($static_text_array as $key => $value) {
         if(!empty($value))
-            echo "<span ".getHTMLColor(substr($value, 0, 1)).">".substr($value, 1)."</span>";
+            echo "<span style=\"".getHTMLColor(substr($value, 0, 1))." font-size: 20px;\">".substr($value, 1)."</span>";
     }
 }
 
