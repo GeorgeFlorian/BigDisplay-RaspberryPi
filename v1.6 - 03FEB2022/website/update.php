@@ -32,12 +32,13 @@ include(__DIR__ . "/config/update.php");
             <a href="https://www.metrici.ro/" target="_blank" class="logo"></a>
             <ul>
                 <li><a href="/index.php">Home</a></li>
+                <li><a href="/static_display.php">Static Text</a></li>
                 <li class="dropdown">
                     <a class="touch">Network Settings <i class="fas fa-angle-down"></i><i
                             class="fas fa-angle-up"></i></a>
                     <div class="dropdown-content">
                         <a href="/dhcp.php">DHCP IP</a>
-                        <a href="/static.php">Static IP</a>
+                        <a href="/static_ip.php">Static IP</a>
                     </div>
                 </li>
                 <!-- <li><a href="/files">Import/Export Files</a></li> -->

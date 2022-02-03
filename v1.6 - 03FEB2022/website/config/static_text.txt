@@ -1,1 +1,1 @@
-#Rlocalhost/#Gconfig/#Bstatic_text.php
+#Olocal#Ystatic#Wphp

@@ -31,12 +31,13 @@ include(__DIR__ . "/config/log.php");
             <a href="https://www.metrici.ro/" target="_blank" class="logo"></a>
             <ul>
                 <li><a href="/index.php" class="active">Home</a></li>
+                <li><a href="/static_display.php">Static Text</a></li>
                 <li class="dropdown">
                     <a class="touch">Network Settings <i class="fas fa-angle-down"></i><i
                             class="fas fa-angle-up"></i></a>
                     <div class="dropdown-content">
                         <a href="/dhcp.php">DHCP IP</a>
-                        <a href="/static.php">Static IP</a>
+                        <a href="/static_ip.php">Static IP</a>
                     </div>
                 </li>
                 <!-- <li><a href="/files">Import/Export Files</a></li> -->
@@ -52,17 +53,8 @@ include(__DIR__ . "/config/log.php");
                     <h1>Current Settings</h1>
                 </div>
                 <div class="inner_container">
-                    <p>URL: <span><?php if (isset($arrayInputs[0])) {
-    echo $arrayInputs[0];
-} ?></span>
-                    </p>
-                    <p>URL Refresh Interval: <span><?php if (isset($arrayInputs[1])) {
-    echo $arrayInputs[1];
-} ?></span>(s)
-                    </p>
-                    <p>Brightness: <span><?php if (isset($arrayInputs[2])) {
-    echo $arrayInputs[2];
-} ?></span>(&#37;)</p>
+                    <?php writeConfigToPage() ?>
+                    <div style="height: 30px;"></div>
                 </div>
             </div>
 
@@ -98,77 +90,6 @@ include(__DIR__ . "/config/log.php");
                         <input class="button" type="submit" name="save_settings" value="Save All Values" />
                     </form>
                 </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="title">
-                <h1>Static Display Text</h1>
-            </div>
-            <div class="inner_container">                
-                <form method="post">
-                    <div class="input_container">
-                        <div class="input_row">
-                            <label class="label_" for="getLine1">Text on first line</label>
-                            <input class="input_text" id="getLine1" type="text" placeholder="Enter text on first line"
-                                name="getLine1" value="" title="Text on first line" />
-                        </div>
-                        <div>
-                            <input class="colors" name="line_1_color" list="line_1_color" placeholder="Pick a color">
-                            <datalist id="line_1_color">
-                                <option value="Red">
-                                <option value="Orange">
-                                <option value="Yellow">
-                                <option value="Green">
-                                <option value="Blue">
-                                <option value="Indigo">
-                                <option value="Violet">
-                                <option value="White">
-                            </datalist>
-                        </div>
-                    </div>
-                    <div class="input_container">
-                        <div class="input_row">
-                            <label class="label_" for="getLine2">Text on second line</label>
-                            <input class="input_text" id="getLine2" type="text" placeholder="Enter text on second line"
-                                name="getLine2" value="" title="Text on second line" />
-                        </div>
-                        <div>
-                            <input class="colors" name="line_2_color" list="line_2_color" placeholder="Pick a color">
-                            <datalist id="line_2_color">
-                                <option value="Red">
-                                <option value="Orange">
-                                <option value="Yellow">
-                                <option value="Green">
-                                <option value="Blue">
-                                <option value="Indigo">
-                                <option value="Violet">
-                                <option value="White">
-                            </datalist>
-                        </div>
-                    </div>
-                    <div class="input_container">
-                        <div class="input_row">
-                            <label class="label_" for="getLine3">Text on third line</label>
-                            <input class="input_text" id="getLine3" type="text" placeholder="Enter text on third line"
-                                name="getLine3" value="" title="Text on third line" />
-                        </div>
-                        <div>
-                            <input class="colors" name="line_3_color" list="line_3_color" placeholder="Pick a color">
-                            <datalist id="line_3_color">
-                                <option value="Red">
-                                <option value="Orange">
-                                <option value="Yellow">
-                                <option value="Green">
-                                <option value="Blue">
-                                <option value="Indigo">
-                                <option value="Violet">
-                                <option value="White">
-                            </datalist>
-                        </div>
-                    </div>
-                    <input class="button" type="submit" name="save_text" value="Save All Values" />
-                </form>
             </div>
         </div>
 

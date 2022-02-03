@@ -1,1 +1,7 @@
-#Rlocalhost/#Gconfig/#Bstatic_text.php
+<br />
+<b>Warning</b>:  fopen(/var/www/html/website/config/static_text.lock): failed to open stream: Permission denied in <b>/var/www/html/website/static_text.php</b> on line <b>15</b><br />
+<br />
+<b>Warning</b>:  flock() expects parameter 1 to be resource, bool given in <b>/var/www/html/website/static_text.php</b> on line <b>19</b><br />
+Could not open file to read
+<br />
+<b>Warning</b>:  fclose() expects parameter 1 to be resource, bool given in <b>/var/www/html/website/static_text.php</b> on line <b>28</b><br />
