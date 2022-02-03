@@ -1,1 +1,0 @@
-Warning ! Connection timeout.<br>Connection established !<br>Display Text: #BEGIN#GFree  8#RBusy 36#BTotal 44<br>Line 1: Free  8<br>Color for line 1: Green<br>Line 2: Busy 36<br>Color for line 2: Red<br>Line 3: Total 44<br>Color for line 3: Blue<br>Number of lines: 3<br>

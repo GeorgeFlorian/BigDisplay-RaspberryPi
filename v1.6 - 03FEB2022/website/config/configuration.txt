@@ -1,0 +1,3 @@
+http://localhost/config/static_text.php
+3
+50

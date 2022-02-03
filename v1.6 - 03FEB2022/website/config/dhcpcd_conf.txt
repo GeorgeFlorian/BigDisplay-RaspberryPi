@@ -1,0 +1,17 @@
+interface wlan0
+noipv4
+noipv6
+
+interface eth0
+hostname Metrici_DisplayEth_D
+clientid Metrici_DisplayEth_D
+
+profile static_eth0
+hostname Metrici_Display_fallback
+clientid Metrici_Display_fallback
+static ip_address=192.168.1.70/24
+static routers=192.168.1.1
+static domain_name_servers=8.8.8.8
+
+interface eth0
+fallback static_eth0
