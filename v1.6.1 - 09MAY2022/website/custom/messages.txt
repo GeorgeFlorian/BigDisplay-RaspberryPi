@@ -1,0 +1,3 @@
+1|#RStorage1 full|#GStorage1 ----
+2|#RStorage2 full|#GStorage2 ----
+3|#RStorage3 full|#GStorage3 ----

@@ -1,0 +1,4 @@
+1|#GMesajul#Gnumarul#Gunu
+2|#BMessage#Bnumber#Btwo
+3|#RMessage#Rnumero#Rtrois
+4|#Y1qaz#Y2wsx#Y3edc

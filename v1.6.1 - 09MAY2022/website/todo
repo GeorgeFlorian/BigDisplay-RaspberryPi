@@ -1,0 +1,11 @@
+@Fixed css for small viewports;
+@Remove fontawesome;
+@Move Jquery to local;
+@Move Montserrat font to local;
+@Have a default value for country code in DHCP and Static IP pages;
+@Beautify custom and custom1;
+
+- Change update script to remove files instead of replacing them
+
+
+http://localhost/custom/get_current_message.php

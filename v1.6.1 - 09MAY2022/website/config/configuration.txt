@@ -1,0 +1,3 @@
+http://localhost/custom/get_current_message.php
+3
+50

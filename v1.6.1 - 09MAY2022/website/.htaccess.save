@@ -1,0 +1,5 @@
+RedirectMatch ^/$ /index.php
+
+
+
+

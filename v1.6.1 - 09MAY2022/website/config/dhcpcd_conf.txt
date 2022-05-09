@@ -1,0 +1,11 @@
+interface wlan0
+hostname MetriciDisplayWiFiD
+
+profile static_eth0
+hostname MetriciDisplayFallback
+static ip_address=192.168.1.70/24
+static routers=192.168.1.1
+static domain_name_servers=8.8.8.8
+
+interface eth0
+fallback static_eth0
